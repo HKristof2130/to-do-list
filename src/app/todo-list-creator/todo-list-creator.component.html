@@ -1,0 +1,10 @@
+<h1>ToDo List</h1>
+
+<div>
+    <input type="text" placeholder="Add a new todo-list" #list/>
+    <button (click)="addList(list.value)">Add list</button>
+</div>
+
+<div>
+    <app-todo-list [lists]="activeLists"></app-todo-list>
+</div>

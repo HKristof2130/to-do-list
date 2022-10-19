@@ -1,0 +1,13 @@
+<section *ngFor="let list of lists; let indexOfList = index">
+    {{list.name}}
+    <ul *ngFor="let todo of list.todos; let todoIndex = index">
+        <li>
+            <input id="cBox" type="checkbox"/>
+            {{todo}}
+            <button (click)="deleteTodoItem(indexOfList,todoIndex)">Delete</button>
+        </li>
+        
+    </ul>
+    <input type="text" placeholder="Add new todo item" #todoItem/>
+    <button (click)="addTodoItem(todoItem.value,indexOfList)">Add</button>
+</section>
